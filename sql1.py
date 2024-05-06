@@ -1,7 +1,7 @@
 #TO CREATE NEW DATABASES
 
 import mysql.connector
-mydb=mysql.connector.connect(host="localhost",user="username",password="your password",database="stduManage")
+mydb=mysql.connector.connect(host="localhost",user="username",password="your password")
 mycursor=mydb.cursor()
 
 def createDatabase(dbName):
@@ -9,7 +9,9 @@ def createDatabase(dbName):
 	mycursor.execute(sql)
 createDatabase("stduManage")
 
-
+import mysql.connector
+mydb=mysql.connector.connect(host="localhost",user="username",password="your password",database="stduManage')
+mycursor=mydb.cursor()
 
 #TO CREATE A TABLE IN THAT DATABASE
 def createStudenttable():
