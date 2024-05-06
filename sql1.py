@@ -1,3 +1,19 @@
+
+'''MYSQL Installation Command:
+
+    • sudo apt install mysql-server
+    • sudo systemctl start mysql.service
+    • sudo mysql
+    • ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+    • exit
+    • mysql -u root -p
+
+Connect DB Using Python
+    • sudo pip install mysql-connector-python
+'''
+
+
+
 #TO CREATE NEW DATABASES
 
 import mysql.connector
@@ -10,7 +26,7 @@ def createDatabase(dbName):
 createDatabase("stduManage")
 
 import mysql.connector
-mydb=mysql.connector.connect(host="localhost",user="username",password="your password",database="stduManage')
+mydb=mysql.connector.connect(host="localhost",user="username",password="your password",database="stduManage")
 mycursor=mydb.cursor()
 
 #TO CREATE A TABLE IN THAT DATABASE
